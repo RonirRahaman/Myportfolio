@@ -238,12 +238,13 @@ html {
 .about,
 .services,
 .skills,
+.experience,
 .projects {
     font-family: 'Poppins', sans-serif;
     padding: 50px;
 }
 
-section .title {
+section .title-old {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -253,7 +254,7 @@ section .title {
     font-family: 'Ubuntu', sans-serif;
 }
 
-section .title::before {
+section .title-old::before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -264,7 +265,7 @@ section .title::before {
     transform: translateX(-50%);
 }
 
-section .title::after {
+section .title-old::after {
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -289,6 +290,7 @@ section .title::after {
     .about,
     .services,
     .skills,
+    .experience,
     .projects {
         padding: 10px;
     }
@@ -301,7 +303,7 @@ section {
     padding: 30px 0;
 }
 
-.about .title::after {
+.about .title-old::after {
     content: "who i am";
 }
 
@@ -366,13 +368,13 @@ section {
     background-size: cover;
 }
 
-.services .title::after {
+.services .title-old::after {
     color: #fff;
     background: #5c98fa;
     content: "what i provide";
 }
 
-.services .serv-content .card {
+.services .serv-content .card-old {
     width: calc(33% - 20px);
     background: #556cbc;
     text-align: center;
@@ -382,24 +384,24 @@ section {
     transition: all 0.5s ease;
 }
 
-.services .serv-content .card:hover {
+.services .serv-content .card-old:hover {
     background: #b5c2f465;
 }
 
-.services .serv-content .card.box {
+.services .serv-content .card-old.box {
     transition: all 0.5s ease;
 }
 
-.services .serv-content .card .box:hover {
+.services .serv-content .card-old .box:hover {
     transform: scale(1.05);
 }
 
-.services .serv-content .card i {
+.services .serv-content .card-old i {
     font-size: 50px;
     color: #c5ea94;
 }
 
-.services .serv-content .card .text {
+.services .serv-content .card-old .text {
     font-size: 25px;
     font-weight: 600;
     margin: 10px 0 7px 0;
@@ -408,19 +410,19 @@ section {
 }
 
 @media (max-width: 990px) {
-    .services .serv-content .card {
+    .services .serv-content .card-old {
         width: calc(50% - 10px);
         margin-bottom: 25px;
     }
 }
 
 @media (max-width: 800px) {
-    .services .serv-content .card {
+    .services .serv-content .card-old {
         width: 100%;
         margin-bottom: 25px;
     }
 
-    .services .title {
+    .services .title-old {
         padding-bottom: 29px;
     }
 }
@@ -434,7 +436,7 @@ section {
     background-size: cover;
 }
 
-.skills .title::after {
+.skills .title-old::after {
     content: "what i know";
 }
 
@@ -518,7 +520,7 @@ section {
 }
 
 .skills .skills-content .right .html::before {
-    width: 90%;
+    width: 100%;
 }
 
 .skills .skills-content .right .css::before {
@@ -526,18 +528,18 @@ section {
 }
 
 .skills .skills-content .right .js::before {
-    width: 80%;
+    width: 90%;
 }
 
 .skills .skills-content .right .sql::before {
-    width: 50%;
+    width: 80%;
 }
 
 .skills .skills-content .right .phy::before {
-    width: 60%;
+    width: 50%;
 }
 .skills .skills-content .right .rea::before {
-    width: 50%;
+    width: 70%;
 }
 
 @media (max-width: 970px) {
@@ -559,25 +561,113 @@ section {
     background-size: cover;
 }
 
-.projects .title::after {
+.projects .title-old::after {
     content: "My work";
     color: #fa6d1a;
 }
 
-.projects .carousel .carousel-cell {
-    background: #f8b94dea;
-    border-radius: 6px;
-    padding: 35px 35px;
-    margin-left: 30px;
-    text-align: center;
-}
-
-.projects .carousel .carousel-cell .text {
-    font-size: 25px;
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+  
+  .card {
+    display: flex;
+    /* height: 280px;
+    width: 200px; */
+    height: 330px;
+    width: 250px;
+    background-color: #261111;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem #000000bf;
+    margin-left: -50px;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+  
+  .title {
+    color: white;
     font-weight: 600;
-    padding-bottom: 20px;
-    font-family: 'Cinzel', sans-serif;
-    color: #532d22;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+  }
+  
+  .emptybar {
+    background-color: #2e3033;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: rgb(0,154,217);
+    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    transition: 0.6s ease-out;
+  }
+
+  .fillbody{
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    width: 183px;
+    color: #fff;
+  }
+  
+  .card:hover .filledbar {
+    width: 120px;
+    transition: 0.4s ease-out;
+  }
+
+  .proj-img{
+    width: 100%;
+    height: 90px;
+  }
+
+  @media(max-width:1060px) {
+    .card {
+        height: 230px;
+        width: 190px;
+    }
+    .proj-img{
+        width: 100%;
+        height: 60px;
+    }
+    .fillbody{
+        width: 149px;
+        font-size: 10px;
+    }
 }
 
 /* footer start */
@@ -598,6 +688,7 @@ section {
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul {
@@ -685,17 +776,17 @@ ul {
     font-family: 'Poppins', sans-serif;
 }
 
-.footer_col .emailme button {
+/* .footer_col .emailme button-old {
     width: 70px;
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
 
-.footer_col .emailme button:hover {
+.footer_col .emailme button-old:hover {
     color: #24262b;
     background-color: #ffff;
-}
+} */
 
 span {
     color: #ffffff;
@@ -765,3 +856,98 @@ span {
       padding: 12px 15px;
     }
 }
+
+/* EXPERIENCE START */
+.experience {
+    background: url("Brown.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.experience .title-old::after {
+    content: "Work Experience";
+    color: #fa6d1a;
+    background-color: #fcf1df;
+}
+
+.container-ex {
+    height: 100%;
+    width: 850px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .card-ex {
+    position: relative;
+    padding: 1rem;
+    width: 350px;
+    height: 450px;
+    box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+    border-radius: 0.9rem;
+    background-color: #4bb7e6de;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .card-blue {
+    background: #33c562d1;
+  }
+  
+  .product-image {
+    text-align: center;
+    width: 100%;
+    transform: translate(0, -1.5rem);
+    transition: transform 500ms ease-in-out;
+    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+  }
+  .product-info {
+    text-align: center;
+  }
+  
+  .card-ex:hover .product-image {
+    transform: translate(-1.5rem, -7rem) rotate(-20deg);
+  }
+  
+  .product-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .product-info p {
+    margin: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .price {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+  }
+  .fav {
+    box-sizing: border-box;
+    background: #fff;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid#000;
+    display: grid;
+    place-items: center;
+  }
+  
+  .svg {
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+    transition: all 500ms ease;
+  }
+  
+  .fav:hover .svg {
+    fill: #000;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .container-ex {
+      padding: 2rem 0;
+      width: 100%;
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }

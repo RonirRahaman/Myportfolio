@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ronir Rahaman</title>
+    <link rel="icon" href="myself.jpg" type="image/x-icon">
+    <meta name="description" content="SK Ronir Rahaman - Portfolio (Software Engineer)">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 
 <body>
@@ -27,6 +28,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contacts">Contact</a></li>
             </ul>
@@ -41,14 +43,14 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">SK Ronir Rahaman</div>
                 <div class="text-3">And I'm a <span class="auto-type"></span></div>
-                <a href="./CV.doc" download="Ronir-CV"><i class="fa-solid fa-download"> </i> Download my
+                <a href="./nCV-4.pdf" download="Ronir-CV"><i class="fa-solid fa-download"> </i> Download my
                     CV</a>
             </div>
         </div>
     </section>
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About me</h2>
+            <h2 class="title-old">About me</h2>
             <div class="about-content">
                 <div class="column left">
                     <img src="profil.jpg" alt="">
@@ -65,29 +67,29 @@
     </section>
     <section class="services" id="services">
         <div class="max-width">
-            <h2 class="title">My Services</h2>
+            <h2 class="title-old">My Services</h2>
             <div class="serv-content">
-                <div class="card">
+                <div class="card-old">
                     <div class="box">
-                        <i class="fa-solid fa-paintbrush"></i>
+                        <i class="fa-solid fa-code"></i>
                         <div class="text">Wed Design</div>
                         <p>My services offer adaptive design and responsive web design.</p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card-old">
                     <div class="box">
                         <i class="fa-solid fa-chart-line"></i>
-                        <div class="text">Advertisement</div>
-                        <p>I also offer a fully serviced digital marketing.</p>
+                        <div class="text">Data analysis</div>
+                        <p>I also offer a fully serviced Data analysis.</p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card-old">
                     <div class="box">
-                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-paintbrush"></i>
                         <div class="text">App Design</div>
-                        <p>I design mobile UI on both iOS and Android platforms.</p>
+                        <p>I design mobile UI in Android platforms.</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +98,7 @@
     </section>
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My Skills</h2>
+            <h2 class="title-old">My Skills</h2>
             <div class="skills-content">
                 <div class="column left">
                     <div class="text">My creative skills & expriences</div>
@@ -109,14 +111,14 @@
                 <div class="column right">
                     <div class="bars">
                         <div class="info">
-                            <span>HTML</span>
-                            <span>90%</span>
+                            <span>HTML/CSS</span>
+                            <span>100%</span>
                         </div>
                         <div class="line html"> </div>
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>CSS</span>
+                            <span>NodeJs</span>
                             <span>70%</span>
                         </div>
                         <div class="line css"> </div>
@@ -124,28 +126,28 @@
                     <div class="bars">
                         <div class="info">
                             <span>JavaScript</span>
-                            <span>80%</span>
+                            <span>90%</span>
                         </div>
                         <div class="line js"> </div>
                     </div>
                     <div class="bars">
                         <div class="info">
-                            <span>SQL</span>
-                            <span>50%</span>
+                            <span>MySQL</span>
+                            <span>80%</span>
                         </div>
                         <div class="line sql"> </div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>Python</span>
-                            <span>60%</span>
+                            <span>50%</span>
                         </div>
                         <div class="line phy"> </div>
                     </div>
                     <div class="bars">
                         <div class="info">
                             <span>React.js</span>
-                            <span>50%</span>
+                            <span>70%</span>
                         </div>
                         <div class="line rea"> </div>
                     </div>
@@ -153,46 +155,111 @@
             </div>
         </div>
     </section>
-    <section class="projects" id="projects">
-        <div class="max-width">
-            <h2 class="title">My Projects</h2>
-            <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true, "imagesLoaded":true }'>
-                <div class="carousel-cell">
-                    <div class="box">
-                        <div class="text">IOT Pet Feeder </div>
-                        <p>We developed a feeder to help allocate a specific food diet to small pets such as dogs and
-                            cats. It will be very useful whenever a pet owner is outside the residence and/or unable to
-                            feed his/her pets normally. We set the feeder to start beeping from time to time. Once the
-                            Pet comes closer to the device, In addition, we also decided to add the option to control
-                            the pet feeder from our mobile phone, using a pre-defined dashboard made with Freeboard. we
-                            control the device by an online App. Automatic Pet Feeder</p>
-                    </div>
+    <section class="experience" id="experience">
+        <h2 class="title-old">My Experience</h2>
+        <div class="container-ex">
+            <div class="card-ex">
+                <div class="product-image">
+                    <img style="height: 154px; width: 47%;" src="https://i.postimg.cc/Zn596wSV/chuu.png"
+                        alt="OFF-white Red Edition" draggable="false" />
                 </div>
-                <div class="carousel-cell">
-                    <div class="box">
-                        <div class="text">Dodge Bars Game </div>
-                        <p>In this project, we tend to vogue and implement a Dodge Bars video game. In this game, the
-                            player can manage the vertical movement of the bicycle (every pressing on the keyboard makes
-                            the bicycle leap without control). As soon as the game begins, tubes will keep appearing
-                            from the right side of the screen and move to the left side. The goal of this game is to
-                            control the bicycle, dodging and passing the incoming tubes, as many as possible. The game
-                            is endless until the bicycle eventually hits a bar/tube, ground, or ceiling.</p>
-                    </div>
+                <div class="product-info">
+                    <h2>Trakkerz Technology Pvt Ltd</h2>
+                    <div class="price">Software developers</div>
+                    <p>Collaborated with cross-functional teams at <b>Vawsum School Pvt Ltd</b> to design and implement
+                        innovative front-end modules
+                        and features, contributing to the development of the Vawsum.
+                        Created APIs and integrated them into the frontend, ensuring seamless data flow and dynamic user
+                        interactions. Assisted in training new hires, providing guidance and support to facilitate their
+                        integration into the team.</p>
                 </div>
-                <div class="carousel-cell">
-                    <div class="box">
-                        <div class="text">Front End React project </div>
-                        <p>I created a navigational page on an educational website using ReactJs. The page contains
-                            connection information and various information about the website. It's a project built on
-                            React. This is an online education site where you can connect and learn all the various
-                            subjects available online. One of the key features of React is that it uses JavaScript XML
-                            or JSX, JSX is mainly used for developing the building blocks of the front-end, and it is
-                            quite similar to HTML syntax.</p>
-                    </div>
+            </div>
+            <div class="card-ex card-blue">
+                <div class="product-image">
+                    <img style="width: 30%;" src="https://i.postimg.cc/yYwdN1kf/tiya.png" alt="OFF-white Blue Edition"
+                        draggable="false" />
+                </div>
+                <div class="product-info">
+                    <h2>Vawsum School Pvt Ltd</h2>
+                    <div class="price">Web Developer Internship</div>
+                    <p>During my internship, I collaborated closely with senior developers and team members to develop
+                        and maintain web
+                        applications. I gained valuable experience in front-end development and learned how to work
+                        independently, taking
+                        ownership of my projects. Additionally, I had the opportunity to create customized websites for
+                        our clients, enhancing my
+                        skills in client-facing roles and project delivery.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="projects" id="projects">
+        <h2 class="title-old">My Projects</h2>
+        <div class="container">
+            <div class="card">
+                <a href="https://ronir-rahaman-react.netlify.app/" target="_blank">
+                    <h3 class="title">Account Management</h3>
+                </a>
+                <div class="bar">
+                    <div class="emptybar"></div>
+                    <div class="filledbar"></div>
+                </div>
+                <div class="fillbody">
+                    <img src="https://i.postimg.cc/s2c5zM4h/3rd.png" class="proj-img">
+                    <p>
+                        MERN Stack. You can create, edit or delete contact details.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://dewlearn.netlify.app/" target="_blank">
+                    <h3 class="title">Educational Website</h3>
+                </a>
+                <div class="bar">
+                    <div class="emptybar"></div>
+                    <div class="filledbar"></div>
+                </div>
+                <div class="fillbody">
+                    <img src="https://i.postimg.cc/CxN6PHQy/1st.png" class="proj-img">
+                    <p>
+                        ReactJs. Simple landing page for Educational Site.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://ronirrahaman.github.io/kasarProject/" target="_blank">
+                    <h3 class="title">Sweet Shop</h3>
+                </a>
+                <div class="bar">
+                    <div class="emptybar"></div>
+                    <div class="filledbar"></div>
+                </div>
+                <div class="fillbody">
+                    <img src="https://i.postimg.cc/mgc8wyRg/2nd.png" class="proj-img">
+                    <p>
+                        Using HTML/CSS & JS. respopnsive and user-friendly Website.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://ml-salary-ka6h.onrender.com/" target="_blank">
+                    <h3 class="title">Ml-Salary</h3>
+                </a>
+                <div class="bar">
+                    <div class="emptybar"></div>
+                    <div class="filledbar"></div>
+                </div>
+                <div class="fillbody">
+                    <img src="https://i.postimg.cc/cCHLqjkY/4tg.png" class="proj-img">
+                    <p>
+                        Using TypeScript in ReactJs. See the Max and Min Salary for ML jobs
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer" id="contacts">
         <div class="footerone">
             <h1>my contacts</h1>
@@ -203,8 +270,8 @@
                         <li><a href="#"><i class="fa-solid fa-location-dot"></i> Purba Medinipur<br> PIN 721151, West
                                 Bengal,<br> INDIA</a></li>
                         <li><a href="tel:9078262584"><i class="fa-brands fa-whatsapp"></i> +91 987654321</a></li>
-                        <li><a href="mailto:ronirrahaman22@gmail.com"><i class="fa-solid fa-envelope"></i>
-                                ronirrahaman22@gmail.com</a></li>
+                        <li><a href="mailto:ronirrahaman22@gmail.com">
+                                <i class="fa-solid fa-envelope"></i> ronirrahaman22@gmail.com</a></li>
                     </ul>
                 </div>
                 <div class="footer_col">
@@ -215,15 +282,15 @@
                         <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
-                <div class="footer_col">
+                <!-- <div class="footer_col">
                     <h4>Email me</h4>
                     <div class="emailme">
                         <input class="border" type="text" id="name" placeholder="your name" required>
                         <input class="border" type="email" id="email" placeholder="Email id" required>
                         <textarea class="border" rows="3" id="message" placeholder="your message"></textarea>
-                        <button class="border" type="submit">Send</button>
+                        <button class="border button-old" type="submit">Send</button>
                     </div>
-                </div>
+                </div> -->
                 <div class="footer_col">
                     <h4>Follow me</h4>
                     <div class="social_link">
@@ -237,12 +304,11 @@
             </div>
         </div>
     </footer>
-    <div class="end"><span>Created by SK Ronir Rahaman © 2022 All right reserved.</span></div>
+    <div class="end"><span>Created by SK Ronir Rahaman © 2024 All right reserved.</span></div>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>
